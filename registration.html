@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>SCOS -Registration</title>
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style-responsive.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    </head>
+    <body>
+        <section class = "bg-img"></section>
+        <section class= "register-container"> 
+            <section style="text-align: center;">
+                <a href="index.php"><img src = "image/logo.png" alt="logo"></a>
+                <h2>New User Registration</h2> 
+            </section>
+            
+            <form action="registrationProcess.php" method="post" >
+                <section>
+                    <table>
+                        <tr>
+                            <td>
+                                <label for="email"><b>Login Email Address<span style="color:red;font-weight: bolder;">*</span></b></label><br/>
+                                <input type="email" id="email" name="email" placeholder="Login Email Address" required>
+                                
+                            </td>
+                            <td>
+                                <section class="radio-text">
+                                    <label for="gender"><b>Gender<span style="color:red;font-weight: bolder;">*</span></b></label><br/>
+                                    <input type="radio" id="gender" name="gender" value="Male" required>Male
+                                    <input type="radio" id="gender" name="gender" value="Female">Female
+                                </section>
+                              
+                              
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>  
+                                <label for="name"><b>Full Name<span style="color:red;font-weight: bolder;">*</span></b></label><br/>
+                                <input type="text" oninput="this.value = this.value.toUpperCase();" id="name" name="name" placeholder="Full Name" required
+                                pattern='\S(.*\S)?' title="The field should not be null." >   
+                            </td>
+                            <td>
+                                <label for="phoneno"><b>Contact Number<span style="color:red;font-weight: bolder;">*</span></b></label><br/>
+                                <input type="text" id="phoneno" name="phoneno" placeholder="01234567890" pattern="[0-9.]+" required 
+                                title="The value must be a number.">
+                            </td>
+                        </tr>
+                            
+
+                        <tr>
+                            <td colspan="2"><hr/ style="width:104%"></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <label for="password"><b>Password<span style="color:red;font-weight: bolder;">*</span></b></label><br/>
+                                <input type="password" id="password" name="password" placeholder="Password"  pattern=".{8,}" required title="Your password needs to be at least 8 characters long.">
+                            </td>
+                            <td>
+                                <label for="re-password"><b>Confirm Password<span style="color:red;font-weight: bolder;">*</span></b></label><br/>
+                                <input type="password" id="repassword" name="repassword" placeholder="Confirm Password"  pattern=".{8,}" required title="Your password needs to be at least 8 characters long.">
+                            </td>
+                        </tr>
+                        <tr>
+                            <td colspan="2"><input type="submit" value="Register Now"></td>
+                        </tr>
+                    </table>
+
+                </section>
+             
+                <section class="user-choice2">
+                    <ul>
+                        <li style="text-align: center;">Already have an account? <a href="user-login.php">Login now</a></li>
+                    </ul>
+                </section>  
+                      
+            </form>   
+  
+        </section>          
+
+    
+</body>
+</html>
